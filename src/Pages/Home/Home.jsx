@@ -3,6 +3,8 @@ import Woman from "../../assets/woman.png";
 import Woman2 from "../../assets/woman2.png";
 import Speak from "../../assets/speaks.png";
 import Voice from "./Voice";
+import Mariela from "./Mariela";
+import Download from "./Download"
 
 const Home = () => {
   return (
@@ -58,6 +60,8 @@ const Home = () => {
       </div>
 
       <Voice />
+      <Mariela />
+      <Download />
     </div>
   );
 };

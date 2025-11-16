@@ -44,7 +44,7 @@ const Download = () => {
           className="absolute bottom-15 left-[8rem] h-[7rem] w-[13%] object-cover rounded-2xl z-0 opacity-80"
         />
 
-        <p className="absolute bottom-7 text-xl text-[text-[#2e2c2b]] text-center">— ANGELA, FOUNDER OF SHE.IS</p>
+        <p className="absolute bottom-7 text-xl text-[#2e2c2b] text-center">— ANGELA, FOUNDER OF SHE.IS</p>
       </div>
     </div>
   );

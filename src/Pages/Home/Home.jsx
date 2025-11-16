@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="bg-[#dcd3ca]">
       <div className="min-h-screen relative overflow-hidden pb-50">
-        <nav className="absolute top-10 right-6 flex gap-5 mb-10 text-[12px] text-[#d84136]">
+        <nav className="absolute top-10 right-6 md:flex gap-5 mb-10 text-[12px] text-[#d84136] hidden">
           <a href="#">HOME</a>
           <a href="#">ABOUT</a>
           <a href="#">VOICE</a>
@@ -21,17 +21,16 @@ const Home = () => {
           <a href="#">CONTACT</a>
         </nav>
 
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid  md:grid-cols-2">
           <div className="relative">
-            <img src={Speak} className="absolute top-10 w-[25%] left-10" />
+            <img src={Speak} className="absolute top-5 md:top-10 w-[20%] md:w-[25%] left-2 md:left-10" />
 
             <img
               src={Woman}
-              className="w-[90%] h-[100vh] object-cover"
-              alt=""
+              className="w-[50%] md:w-[90%] h-[60vh] md:h-[100vh] object-cover"
             />
 
-            <h1 className="absolute top-[40%] left-100 font-[Bebas Neue] text-[#d84136] text-8xl">
+            <h1 className="absolute top-[20%] md:top-[40%] left-15 md:left-100 font-[Bebas Neue] text-[#d84136] text-5xl md:text-8xl">
               IGNITING
               <br />
               <span className="inline-block ml-25">PURPOSE</span>
@@ -39,7 +38,7 @@ const Home = () => {
           </div>
 
           <div>
-            <h1 className="absolute top-25 left-[50rem] font-[Bebas Neue] text-lg">
+            <h1 className="absolute top-[20rem] left-[10rem] md:top-25 md:left-[50rem] font-[Bebas Neue] md:text-lg">
               GOSPEL-CENTERED MOVEMENT
               <br />
               <span className="inline-block ml-25">COMMUNITY+MINITRY</span>
@@ -57,7 +56,7 @@ const Home = () => {
         <h1 className="transform rotate-90 absolute top-[40rem] right-[30rem] font-[Bebas Neue] text-xl text-[#2e2c2b]">
           WITH AUTHOR, SPEAKER AND
           <br />
-          <span className="inline-block ml-25">COACH MARIELA ROSARIO</span>
+          <span className="inline-block ml-25">COACH COMFORT ASUBIKE</span>
         </h1>
       </div>
 

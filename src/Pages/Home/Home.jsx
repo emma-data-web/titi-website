@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Woman from "../../assets/woman.png";
 import Woman2 from "../../assets/woman2.png";
 import Speak from "../../assets/speaks.png";
 import Voice from "./Voice";
 import Mariela from "./Mariela";
-import Download from "./Download"
-import Bust from "./Bust"
-import Instagram from "./Instagram"
+import Download from "./Download";
+import Bust from "./Bust";
+import Instagram from "./Instagram";
+import { IoClose, IoMenu } from "react-icons/io5";
 
 const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="bg-[#dcd3ca]">
-      <div className="min-h-screen relative overflow-hidden pb-50">
+      <div className="min-h-screen relative lg:pb-50">
         <nav className="absolute top-10 right-6 md:flex gap-5 mb-10 text-[12px] text-[#d84136] hidden">
           <a href="#">HOME</a>
           <a href="#">ABOUT</a>
@@ -21,16 +24,80 @@ const Home = () => {
           <a href="#">CONTACT</a>
         </nav>
 
-        <div className="grid  md:grid-cols-2">
+        <button
+          className="absolute top-8 right-6 text-3xl text-[#d84136] md:hidden z-50"
+          onClick={() => setMenuOpen(true)}
+        >
+          <IoMenu />
+        </button>
+
+        {menuOpen && (
+          <div className="fixed inset-0 bg-black/90 text-white flex items-center justify-center z-50">
+            <div
+              className="absolute right-0 top-0 h-full w-64 bg-[#0e0e0e] p-10 
+            flex flex-col gap-8 text-lg transform transition-all duration-500 
+            translate-x-0"
+            >
+              <button
+                className="absolute top-6 right-6 text-3xl"
+                onClick={() => setMenuOpen(false)}
+              >
+                <IoClose />
+              </button>
+
+              <a
+                className="hover:text-[#d84136]"
+                onClick={() => setMenuOpen(false)}
+              >
+                HOME
+              </a>
+              <a
+                className="hover:text-[#d84136]"
+                onClick={() => setMenuOpen(false)}
+              >
+                ABOUT
+              </a>
+              <a
+                className="hover:text-[#d84136]"
+                onClick={() => setMenuOpen(false)}
+              >
+                VOICE
+              </a>
+              <a
+                className="hover:text-[#d84136]"
+                onClick={() => setMenuOpen(false)}
+              >
+                BOOK
+              </a>
+              <a
+                className="hover:text-[#d84136]"
+                onClick={() => setMenuOpen(false)}
+              >
+                SHOP
+              </a>
+              <a
+                className="hover:text-[#d84136]"
+                onClick={() => setMenuOpen(false)}
+              >
+                CONTACT
+              </a>
+            </div>
+          </div>
+        )}
+
+        <div className="flex gap-10 lg:gap-0">
           <div className="relative">
-            <img src={Speak} className="absolute top-5 md:top-10 w-[20%] md:w-[25%] left-2 md:left-10" />
+            <img
+              src={Speak}
+              className="absolute top-5 md:top-10 w-[30%] md:w-[25%] left-2 md:left-10"
+            />
 
             <img
               src={Woman}
-              className="w-[50%] md:w-[90%] h-[60vh] md:h-[100vh] object-cover"
+              className="w-[50rem] md:w-[23rem] lg:w-[38rem] h-[60vh] lg:h-[100vh] object-cover"
             />
 
-            <h1 className="absolute top-[20%] md:top-[40%] left-15 md:left-100 font-[Bebas Neue] text-[#d84136] text-5xl md:text-8xl">
+            <h1 className="absolute top-[10%] md:top-[20%] lg:top-[40%] left-15 md:left-[15rem] lg:left-100 font-[Bebas Neue] text-[#d84136] text-5xl md:text-6xl lg:text-8xl">
               IGNITING
               <br />
               <span className="inline-block ml-25">PURPOSE</span>
@@ -38,22 +105,21 @@ const Home = () => {
           </div>
 
           <div>
-            <h1 className="absolute top-[20rem] left-[10rem] md:top-25 md:left-[50rem] font-[Bebas Neue] md:text-lg">
-              GOSPEL-CENTERED MOVEMENT
-              <br />
-              <span className="inline-block ml-25">COMMUNITY+MINITRY</span>
-            </h1>
+            <div className="absolute top-[15rem] left-[10rem] md:left-[25rem] md:top-25 lg:top-25 lg:left-[50rem] font-[Bebas Neue] md:text-lg text-[#2e2c2b]">
+              <h1 className=" md:w-full">GOSPEL-CENTERED MOVEMENT</h1>
+              <h1 className="ml-15 mt-5 md:mt-0 md:ml-30">COMMUNITY+MINISTRY</h1>
+            </div>
 
             <div className="flex items-center justify-center h-screen">
               <img
                 src={Woman2}
-                className="w-[50%] h-[500px] object-cover mt-60 rounded-xl"
+                className="w-[40rem] md:w-[13rem] lg:w-[50%] h-[15rem] md:h-[300px] lg:h-[500px] object-cover mt-40 md:mt-0 lg:mt-60 md:ml-[8rem] rounded-xl"
               />
             </div>
           </div>
         </div>
 
-        <h1 className="transform rotate-90 absolute top-[40rem] right-[30rem] font-[Bebas Neue] text-xl text-[#2e2c2b]">
+        <h1 className="md:transform md:rotate-90 absolute top-[40rem] md:right-[10rem] md:top-[33rem] lg:top-[40rem] lg:right-[30rem] font-[Bebas Neue] md:text-xl text-[#2e2c2b]">
           WITH AUTHOR, SPEAKER AND
           <br />
           <span className="inline-block ml-25">COACH COMFORT ASUBIKE</span>

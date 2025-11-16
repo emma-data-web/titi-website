@@ -6,6 +6,7 @@ import Voice from "./Voice";
 import Mariela from "./Mariela";
 import Download from "./Download"
 import Bust from "./Bust"
+import Instagram from "./Instagram"
 
 const Home = () => {
   return (
@@ -64,6 +65,7 @@ const Home = () => {
       <Mariela />
       <Download />
       <Bust />
+      <Instagram />
     </div>
   );
 };

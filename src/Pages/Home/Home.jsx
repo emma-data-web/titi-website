@@ -5,6 +5,7 @@ import Speak from "../../assets/speaks.png";
 import Voice from "./Voice";
 import Mariela from "./Mariela";
 import Download from "./Download"
+import Move from "./Move"
 
 const Home = () => {
   return (
@@ -62,6 +63,7 @@ const Home = () => {
       <Voice />
       <Mariela />
       <Download />
+      <Home />
     </div>
   );
 };

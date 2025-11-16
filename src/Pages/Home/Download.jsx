@@ -1,6 +1,7 @@
 import React from "react";
 import Computer from "../../assets/computer.png";
 import Angela from "../../assets/angela.png";
+import Bible from "../../assets/bible.png";
 
 const Download = () => {
   return (
@@ -21,15 +22,29 @@ const Download = () => {
             God does so you can live an empowered life and activate your
             God-given purpose.
           </p>
-          <button className="bg-[#d84136] py-3 w-60 rounded-lg text-white text-sm">
+          <button className="bg-[#d84136] py-3 w-60 rounded-lg text-white text-sm mb-20">
             DOWNLOAD NOW
           </button>
         </div>
       </div>
 
+      <div className="relative pt-20 flex items-center justify-center pb-20">
+        <img
+          src={Angela}
+          className="absolute top-0 right-[8rem] h-[15rem] w-[20%] object-cover rounded-lg z-0 opacity-80"
+        />
 
-      <div className="relative pt-10">
-        <img src={Angela} className="h-[15rem] w-[20%] object-cover absolute top-0 right-[10rem]" />
+        <p className='font-["Playfair Display"] text-5xl text-center max-w-[70%] text-[#2e2c2b] leading-snug z-10 relative'>
+          "The Atmosphere Completely Shifted As She Allowed The Holy Spirit To
+          Use Her And Resonate In The Hearts Of Every Woman"
+        </p>
+
+        <img
+          src={Bible}
+          className="absolute bottom-15 left-[8rem] h-[7rem] w-[13%] object-cover rounded-2xl z-0 opacity-80"
+        />
+
+        <p className="absolute bottom-7 text-xl text-[text-[#2e2c2b]] text-center">— ANGELA, FOUNDER OF SHE.IS</p>
       </div>
     </div>
   );
